@@ -1,7 +1,7 @@
 {
    "name": "coust-api",
    "version": "0.0.1",
-   "description": "Awesome project developed with TypeORM.",
+   "description": "API do sistema Coust.",
    "type": "commonjs",
    "devDependencies": {
       "@types/express": "^4.17.14",
@@ -21,6 +21,8 @@
    },
    "scripts": {
       "start": "ts-node src/index.ts",
-      "typeorm": "typeorm-ts-node-commonjs"
+      "typeorm": "typeorm-ts-node-commonjs",
+      "migration:generate": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:generate ./src/migrations/default",
+      "migration:run": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:run"
    }
 }
