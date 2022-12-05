@@ -1,6 +1,7 @@
-import { Column, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm"
+import { Entity ,Column, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm"
 import { Conta } from "./Conta"
 
+@Entity('lancamento')
 export class Lancamento{
   
   @PrimaryGeneratedColumn()
@@ -9,7 +10,7 @@ export class Lancamento{
   @Column()
   numeroDaParcela: number
 
-  @Column({ type: 'double' })
+  @Column({ type: 'decimal' })
   valorDaParcela: number
 
   @Column({ type: 'date' })

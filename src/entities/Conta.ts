@@ -14,10 +14,10 @@ export class Conta {
   @Column({ length: 200 })
   descricao: string
 
-  @Column({ type: 'double' })
+  @Column({ type: 'decimal' })
   valorTotal: number
 
-  @Column({ type: 'double' })
+  @Column({ type: 'decimal' })
   valorPago: number
 
   @Column({ type: 'date', default: () => 'NOW()' })

@@ -10,7 +10,7 @@ export class Cartao {
   @Column()
   nomeCartao: string
 
-  @Column({ type: 'double'})
+  @Column({ type: 'decimal'})
   limite: number
   
   @OneToMany(() => Conta, conta => conta.cartao)
