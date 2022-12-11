@@ -20,7 +20,7 @@ export class CartaoController {
     resposta.setMensagem('Cartão cadastrado com sucesso!');
     resposta.setStatus(StatusResultado.SUCESSO);
     
-    return res.status(201).json(resposta.montarResultado());
+    res.status(201).json(resposta.montarResultado());
   } catch (error) {
     const resposta = new Resposta();
     resposta.setMensagem('Erro ao cadastrar novo cartão!');
